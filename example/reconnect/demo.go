@@ -1,13 +1,12 @@
 package main
 
 import (
+	"go-amqp-reconnect/rabbitmq"
 	"log"
 	"sync"
 	"time"
 
-	"github.com/streadway/amqp"
-
-	"github.com/isayme/go-amqp-reconnect/rabbitmq"
+	amqp "github.com/rabbitmq/amqp091-go"
 )
 
 func main() {

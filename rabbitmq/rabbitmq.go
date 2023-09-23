@@ -5,7 +5,7 @@ import (
 
 	"sync/atomic"
 
-	"github.com/streadway/amqp"
+	amqp "github.com/rabbitmq/amqp091-go"
 )
 
 const delay = 3 // reconnect after delay seconds
@@ -81,7 +81,7 @@ func Dial(url string) (*Connection, error) {
 
 			// reconnect if not closed by developer
 			for {
-				// wait 1s for reconnect
+				// wait 3s for reconnect
 				time.Sleep(delay * time.Second)
 
 				conn, err := amqp.Dial(url)
@@ -99,7 +99,7 @@ func Dial(url string) (*Connection, error) {
 	return connection, nil
 }
 
-// Channel amqp.Channel wapper
+// Channel amqp.Channel wrapper
 type Channel struct {
 	*amqp.Channel
 	closed int32
