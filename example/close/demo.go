@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-amqp-reconnect/rabbitmq"
+	"github.com/clintoon/go-amqp-reconnect/rabbitmq"
 	"log"
 	"time"
 
