@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/clintoon/go-amqp-reconnect/rabbitmq"
+	"github.com/splitity/go-amqp-reconnect/rabbitmq"
 	"log"
 	"sync"
 	"time"

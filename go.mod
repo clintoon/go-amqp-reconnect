@@ -1,4 +1,4 @@
-module github.com/clintoon/go-amqp-reconnect
+module github.com/splitity/go-amqp-reconnect
 
 go 1.18
 
