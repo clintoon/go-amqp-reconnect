@@ -142,6 +142,7 @@ func (ch *Channel) Consume(queue, consumer string, autoAck, exclusive, noLocal, 
 			time.Sleep(delay * time.Second)
 
 			if ch.IsClosed() {
+				close(deliveries)
 				break
 			}
 		}
